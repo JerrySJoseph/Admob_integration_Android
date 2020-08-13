@@ -42,6 +42,7 @@ public class InterstitialActivity extends AppCompatActivity {
                 if(position%5==0 && mInterstitialAd.isLoaded())
                 {
                     mInterstitialAd.show();
+
                 }
 
             }
