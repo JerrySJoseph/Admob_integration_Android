@@ -22,18 +22,21 @@
         <Button
             android:layout_marginTop="20dp"
             android:id="@+id/interstitial"
+            android:onClick="OnClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Interstitial Ads"/>
         <Button
             android:layout_marginTop="20dp"
             android:id="@+id/nativeads"
+            android:onClick="OnClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Native Ads"/>
         <Button
             android:layout_marginTop="20dp"
             android:id="@+id/rewarded"
+            android:onClick="OnClick"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rewarded Ads"/>
