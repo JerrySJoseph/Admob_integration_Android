@@ -1,8 +1,10 @@
 package com.example.googleadmobintegration.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.example.googleadmobintegration.R;
@@ -18,6 +20,8 @@ public class BannerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_banner);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Banner Ads");
         LaodAd();
     }
     public void LaodAd()
@@ -28,6 +32,14 @@ public class BannerActivity extends AppCompatActivity {
         mAdView.loadAd(adRequest);
 
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home)
+            finish();
+        return true;
+    }
+
     AdListener mlistener= new AdListener(){
         @Override
         public void onAdFailedToLoad(LoadAdError loadAdError) {

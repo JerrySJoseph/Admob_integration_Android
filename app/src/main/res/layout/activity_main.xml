@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:padding="10dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -13,13 +14,23 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click any of the button for demo of that type of Ad"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:layout_marginBottom="60dp"/>
         <Button
+            style="@style/roundButton"
             android:id="@+id/banner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="OnClick"
             android:text="Banner Ads"/>
         <Button
+            style="@style/roundButton"
             android:layout_marginTop="20dp"
             android:id="@+id/interstitial"
             android:onClick="OnClick"
@@ -27,6 +38,7 @@
             android:layout_height="wrap_content"
             android:text="Interstitial Ads"/>
         <Button
+            style="@style/roundButton"
             android:layout_marginTop="20dp"
             android:id="@+id/nativeads"
             android:onClick="OnClick"
@@ -34,6 +46,7 @@
             android:layout_height="wrap_content"
             android:text="Native Ads"/>
         <Button
+            style="@style/roundButton"
             android:layout_marginTop="20dp"
             android:id="@+id/rewarded"
             android:onClick="OnClick"

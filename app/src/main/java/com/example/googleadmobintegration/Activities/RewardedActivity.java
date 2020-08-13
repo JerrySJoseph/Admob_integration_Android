@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,8 +27,9 @@ public class RewardedActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_rewarded);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Rewarded Ads");
         points_tv=findViewById(R.id.points);
         btn=findViewById(R.id.btn);
         points_tv.setText("Points: "+points);
@@ -35,6 +37,12 @@ public class RewardedActivity extends AppCompatActivity {
         rewardedAd = new RewardedAd(this,
                 "ca-app-pub-3940256099942544/5224354917");
         rewardedAd.loadAd(new AdRequest.Builder().build(), adLoadCallback);
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId()==android.R.id.home)
+            finish();
+        return true;
     }
 
     public void ShowAD(View view) {
